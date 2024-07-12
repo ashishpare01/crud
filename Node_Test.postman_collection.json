@@ -1,0 +1,263 @@
+{
+	"info": {
+		"_postman_id": "0df1c3d1-72b0-44e8-a855-c6bb88021af9",
+		"name": "Node_Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27182980"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"f_userName\": \"samiksha\",\r\n    \"f_Pwd\": \"MERN\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/login/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"login",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Employee",
+			"item": [
+				{
+					"name": "Add Emp",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "f_Name",
+									"value": "Samiksha",
+									"type": "text"
+								},
+								{
+									"key": "f_Email",
+									"value": "samiksha@yopmail.com",
+									"type": "text"
+								},
+								{
+									"key": "f_Mobile",
+									"value": "1234567890",
+									"type": "text"
+								},
+								{
+									"key": "f_Designation",
+									"value": "Software Engineer",
+									"type": "text"
+								},
+								{
+									"key": "f_gender",
+									"value": "Female",
+									"type": "text"
+								},
+								{
+									"key": "f_Course",
+									"value": "Computer Science",
+									"type": "text"
+								},
+								{
+									"key": "imageFile",
+									"type": "file",
+									"src": "/C:/Users/BAPS/Downloads/unnamed.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/employee/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"employee",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Emp",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/employee?page=1&limit=10&sortField=f_Createdate&sortOrder=desc&searchQuery=&isActive=true",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"employee"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								},
+								{
+									"key": "sortField",
+									"value": "f_Createdate"
+								},
+								{
+									"key": "sortOrder",
+									"value": "desc"
+								},
+								{
+									"key": "searchQuery",
+									"value": ""
+								},
+								{
+									"key": "isActive",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Emp By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/employee/66910890ac29e8ba18c84eed",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"employee",
+								"66910890ac29e8ba18c84eed"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Emp",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "f_Name",
+									"value": "Sami",
+									"type": "text"
+								},
+								{
+									"key": "f_Email",
+									"value": "sami@yopmail.com",
+									"type": "text"
+								},
+								{
+									"key": "f_Mobile",
+									"value": "1234567890",
+									"type": "text"
+								},
+								{
+									"key": "f_Designation",
+									"value": "Software Engineer",
+									"type": "text"
+								},
+								{
+									"key": "f_gender",
+									"value": "Female",
+									"type": "text"
+								},
+								{
+									"key": "f_Course",
+									"value": "Computer Science",
+									"type": "text"
+								},
+								{
+									"key": "imageFile",
+									"type": "file",
+									"src": "/C:/Users/BAPS/Downloads/Flying-Duck.jpg",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/employee/66910890ac29e8ba18c84eed/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"employee",
+								"66910890ac29e8ba18c84eed",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Emp",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/employee/6690f9e981283b5e838d2999/delete",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"employee",
+								"6690f9e981283b5e838d2999",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
